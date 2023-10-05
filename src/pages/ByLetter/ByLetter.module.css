@@ -1,0 +1,43 @@
+.home{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.search{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 90%;
+    min-height: 200px;
+    border-radius: 15px;
+    background-color: #CDE8D2;
+}
+
+.searchContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .letter {
+    font-size: 200%;
+    transition: font-size 0.3s ease;
+  }
+  
+  .letter:hover {
+    font-size: 300%;
+    cursor: pointer;
+  }
+  
