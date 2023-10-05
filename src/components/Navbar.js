@@ -8,7 +8,7 @@ const Navbar = () => {
         <NavLink to ="/" className={styles.brand}>
             random <span>Recipes</span>
         </NavLink>
-        <div >
+        <div className={styles.divNav} >
           <ul className={styles.links_list}>
               <li>
                   <NavLink to="/" className={({isActive}) => (isActive ? styles.active : "")}

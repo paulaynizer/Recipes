@@ -1,0 +1,80 @@
+.meal{
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #9e9e9e2c;
+    border-radius: 20px;
+    margin: 50px;
+    text-align: left;
+    transition: width 0.3s ease, height 0.3s ease;
+    min-height: 200px;
+}
+.meal img{
+    width: 150px;
+    border-radius: 50%;
+    margin-top: -20%;
+    transition: width 0.3s ease, height 0.3s ease;
+
+}
+.description{
+    text-align: left;
+    width: 80%;
+}
+.meal h3{
+    color:#50A257 ;
+    margin: 0px;
+    font-size: large;
+}
+.meal:hover{
+    width: 90%;
+    height: 70%;
+    cursor: pointer;
+    background-color: #CDE8D2;
+    
+}
+.meal:hover img{
+    width: 50%;
+    height: auto;
+    cursor: pointer;
+   
+}
+.meal h2{
+    margin-bottom: 2px;
+    margin-top: 3px;
+}
+.meal Link{
+    text-align: right;
+}
+
+.btn{
+    margin-top: 10px;
+    background-color: #50A257;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    right: 60px;
+    margin-right: -60%;
+    margin-bottom: 10px;
+    margin-top: -3%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: #3a753f;
+}
+
+@media screen and (max-width: 520px) {
+    .btn {
+      margin: 0px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+
+  }

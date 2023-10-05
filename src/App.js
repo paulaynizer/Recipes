@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import ByLetter from './pages/ByLetter/ByLetter';
 import ByIngredients from './pages/ByIngredients/ByIngredients';
+import Meal from './pages/Meal/Meal';
+import Ingredients from './pages/Ingredients/Ingredients';
 function App() {
   return (
     <div className="App">
@@ -17,6 +19,8 @@ function App() {
               < Route path="/" element={<Home />} />
               < Route path="/byLetter" element={<ByLetter/>} />
               < Route path="/byIngredient" element={<ByIngredients/>} />
+              < Route path="/meal/:id" element={<Meal/>} />
+              < Route path="/ingredient/:strIngredient" element={<Ingredients/>} />
               </Routes>
             </div>
           <Footer/>

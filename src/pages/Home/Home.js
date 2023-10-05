@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Home.module.css";
+import Recipes from '../../components/Recipes';
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
@@ -21,14 +22,11 @@ const Home = () => {
 
   return (
     <div className={styles.home}>
-
       <div className={styles.search}>
-
-        <img src="/images/inicial.png" alt="ingredients"></img>
+        <img src="/images/inicial.png" alt="ingredients" />
         <div className={styles.searchDiv}>
           <h1 className={styles.title}>Random Recipes</h1>
           <div className={styles.searchContainer}>
-
             <h1>Find the best recipe</h1>
             <div className={styles.searchField}>
               <input
@@ -44,10 +42,7 @@ const Home = () => {
       </div>
       <div className={styles.results}>
         {searchResults.map((meal) => (
-          <div key={meal.idMeal} className={styles.meal}>
-            <img src={meal.strMealThumb} alt={meal.strMeal} />
-            <h2>{meal.strMeal}</h2>
-          </div>
+          <Recipes meal={meal} />
         ))}
       </div>
     </div>

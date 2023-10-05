@@ -4,6 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding: .5em 2em;
+    width: 100%;
 }
 
 .brand {
@@ -18,10 +19,11 @@
 .links_list{
     display:flex;
     list-style: none;
+    width: 100%;
 }
 
-.links_list{
-    margin-right: 1em;
+.divNav{
+    margin-right: 50px;
 }
 
 .links_list li a{
@@ -32,6 +34,10 @@
     background-color: #000;
     color: #fff;
 }
+
+@media screen and (max-width: 400px) {
+    .divNav{display: none;}
+  }
 
 
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./ByIngredients.module.css";
+import { Link } from 'react-router-dom';
 
 const ByIngredients = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -11,22 +12,20 @@ const ByIngredients = () => {
   };
 
   useEffect(() => {
-    // Fetch the list of ingredients from the API
     fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => {
-        // Extract the ingredients array from the API response
+        
         const ingredientsArray = data.meals.map((meal) => ({
           idIngredient: meal.idIngredient,
           strIngredient: meal.strIngredient,
         }));
-        // Update the searchResults state with the fetched ingredients
         setSearchResults(ingredientsArray);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, []); // Empty dependency array means this effect runs once, similar to componentDidMount
+  }, []);
 
   const filteredIngredients = searchResults.filter((ingredient) =>
     ingredient.strIngredient.toLowerCase().includes(searchInput.toLowerCase())
@@ -35,11 +34,11 @@ const ByIngredients = () => {
   return (
     <div className={styles.home}>
       <div className={styles.search}>
-        <h1>Busque um ingrediente</h1>
+        <h1>Find the recipe by ingredient</h1>
         <div className={styles.searchContainer}>
           <input
             type="text"
-            placeholder="Digite o nome do ingrediente"
+            placeholder="Type the ingredient"
             value={searchInput} // Use searchInput here
             onChange={handleSearchChange}
           />
@@ -54,7 +53,8 @@ const ByIngredients = () => {
               alt={ingredient.strIngredient}
               className={styles.ingredientImage}
             />
-            <h2>{ingredient.strIngredient}</h2>
+            
+            <Link to={`/ingredient/${ingredient.strIngredient.toLowerCase()}`} className={styles.btn}>{ingredient.strIngredient}</Link>
           </div>
         ))}
       </div>

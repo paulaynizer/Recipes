@@ -22,7 +22,14 @@
     margin-top: 30px;
 }
 
-
+.results{
+  align-items: center;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px,500px));
+  width: 80%;
+  margin-top: 30px;
+}
 .carousel {
     display: flex;
     justify-content: center;
