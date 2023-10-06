@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <div className={styles.search}>
-        <img src="/images/inicial.png" alt="ingredients" />
+      
         <div className={styles.searchDiv}>
           <h1 className={styles.title}>Random Recipes</h1>
           <div className={styles.searchContainer}>

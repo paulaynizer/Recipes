@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+    width: 100%;
 }
 .results{
     align-items: center;
@@ -20,12 +21,7 @@
 }
 
 
-.search img {
-    display: none;
-    height: 100px;
-    margin-right: -300px;
-    z-index: 1;
-}
+
 .search{
     display: flex;
     width: 95%;
